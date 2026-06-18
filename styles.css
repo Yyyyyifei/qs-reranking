@@ -311,15 +311,15 @@ input[type="search"]::placeholder {
 }
 
 .preset-grid button.selected {
-  background: var(--blue);
-  border-color: var(--blue);
-  box-shadow: 0 10px 22px rgba(37, 99, 184, 0.22);
-  color: #fff;
+  background: #e8f5f3;
+  border-color: #9ed4cd;
+  box-shadow: 0 8px 18px rgba(11, 127, 122, 0.13);
+  color: #135f5b;
 }
 
 .preset-grid button.selected:hover {
-  background: var(--blue-dark);
-  border-color: var(--blue-dark);
+  background: #ddf0ed;
+  border-color: #7fc8bf;
 }
 
 .results-area {
