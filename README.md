@@ -20,6 +20,11 @@ This is an unofficial, non-commercial, for-fun ranking explorer.
 - Custom rankings are experimental. They depend on user-selected weights and rounded workbook indicator scores, so they should not be treated as official QS results.
 - 免责提醒：本工具仅供个人学习、探索和娱乐使用，不代表 QS 官方排名，不应用于正式决策，也不应对原始数据或派生数据进行再分发或商业使用。
 
+## Acknowledgements
+
+- Data source: QS World University Rankings 2027 reference workbook and public ranking list from QS / TopUniversities.
+- Built with OpenAI Codex as a vibe-coding collaborator for data extraction, interface design, and implementation.
+
 ## Data Extraction
 
 Run:
