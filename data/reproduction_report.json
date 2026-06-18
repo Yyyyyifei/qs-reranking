@@ -1,0 +1,293 @@
+{
+  "sourceWorkbook": "2027 QS World University Rankings 1.1 (For qs.com).xlsx",
+  "rowCount": 1504,
+  "headerRow": 3,
+  "scoreColumns": [
+    "AR SCORE",
+    "ER SCORE",
+    "FSR SCORE",
+    "CPF SCORE",
+    "IFR SCORE",
+    "ISR SCORE",
+    "IRN SCORE",
+    "EO SCORE",
+    "SUS SCORE",
+    "Overall SCORE"
+  ],
+  "rankingColumns": [
+    "Rank",
+    "Previous Rank",
+    "AR RANK",
+    "ER RANK",
+    "FSR RANK",
+    "CPF RANK",
+    "IFR RANK",
+    "ISR RANK",
+    "IRN RANK",
+    "EO RANK",
+    "SUS RANK"
+  ],
+  "indicatorColumns": [
+    {
+      "key": "ar",
+      "label": "Academic Reputation",
+      "column": "AR SCORE",
+      "defaultWeight": 30,
+      "lens": "Research and Discovery"
+    },
+    {
+      "key": "cpf",
+      "label": "Citations per Faculty",
+      "column": "CPF SCORE",
+      "defaultWeight": 20,
+      "lens": "Research and Discovery"
+    },
+    {
+      "key": "er",
+      "label": "Employer Reputation",
+      "column": "ER SCORE",
+      "defaultWeight": 15,
+      "lens": "Employability and Outcomes"
+    },
+    {
+      "key": "eo",
+      "label": "Employment Outcomes",
+      "column": "EO SCORE",
+      "defaultWeight": 5,
+      "lens": "Employability and Outcomes"
+    },
+    {
+      "key": "fsr",
+      "label": "Faculty Student Ratio",
+      "column": "FSR SCORE",
+      "defaultWeight": 10,
+      "lens": "Learning Experience"
+    },
+    {
+      "key": "ifr",
+      "label": "International Faculty Ratio",
+      "column": "IFR SCORE",
+      "defaultWeight": 5,
+      "lens": "Global Engagement"
+    },
+    {
+      "key": "irn",
+      "label": "International Research Network",
+      "column": "IRN SCORE",
+      "defaultWeight": 5,
+      "lens": "Global Engagement"
+    },
+    {
+      "key": "isr",
+      "label": "International Student Ratio",
+      "column": "ISR SCORE",
+      "defaultWeight": 5,
+      "lens": "Global Engagement"
+    },
+    {
+      "key": "sus",
+      "label": "Sustainability",
+      "column": "SUS SCORE",
+      "defaultWeight": 5,
+      "lens": "Sustainability"
+    }
+  ],
+  "omittedScoreColumns": [
+    "Overall SCORE"
+  ],
+  "reproduction": {
+    "method": "Weighted sum of rounded workbook indicator scores using QS 2027 indicator weights, then normalized so the highest computed weighted score is 100.",
+    "defaultWeightTotal": 100,
+    "maxRawWeightedScore": 98.935,
+    "rawMeanAbsoluteScoreError": 0.7618,
+    "rawMaxAbsoluteScoreError": 1.33,
+    "normalizedMeanAbsoluteScoreError": 1.1289,
+    "normalizedMaxAbsoluteScoreError": 1.6,
+    "exactOneDecimalScoreMatches": 7,
+    "meanAbsoluteRankDelta": 35.0392,
+    "exactRankMatches": 333,
+    "topMismatches": [
+      {
+        "name": "Comenius University Bratislava",
+        "officialRank": 662,
+        "computedRank": 665,
+        "officialScore": 26.6,
+        "rawWeightedScore": 27.865,
+        "computedScore": 28.2,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "China University of Geosciences",
+        "officialRank": 677,
+        "computedRank": 680,
+        "officialScore": 26.1,
+        "rawWeightedScore": 27.365,
+        "computedScore": 27.7,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Government College University, Faisalabad",
+        "officialRank": 691,
+        "computedRank": 694,
+        "officialScore": 25.8,
+        "rawWeightedScore": 27.06,
+        "computedScore": 27.4,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of Plymouth",
+        "officialRank": 691,
+        "computedRank": 694,
+        "officialScore": 25.8,
+        "rawWeightedScore": 27.06,
+        "computedScore": 27.4,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "HUFS - Hankuk (Korea) University of Foreign Studies",
+        "officialRank": 620,
+        "computedRank": 622,
+        "officialScore": 27.8,
+        "rawWeightedScore": 29.04,
+        "computedScore": 29.4,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Diponegoro University",
+        "officialRank": 662,
+        "computedRank": 664,
+        "officialScore": 26.6,
+        "rawWeightedScore": 27.87,
+        "computedScore": 28.2,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Beirut Arab University",
+        "officialRank": 670,
+        "computedRank": 672,
+        "officialScore": 26.3,
+        "rawWeightedScore": 27.555,
+        "computedScore": 27.9,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of the Basque Country",
+        "officialRank": 677,
+        "computedRank": 679,
+        "officialScore": 26.1,
+        "rawWeightedScore": 27.375,
+        "computedScore": 27.7,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Eastern Mediterranean University",
+        "officialRank": 691,
+        "computedRank": 693,
+        "officialScore": 25.8,
+        "rawWeightedScore": 27.065,
+        "computedScore": 27.4,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of Malta",
+        "officialRank": 696,
+        "computedRank": 698,
+        "officialScore": 25.7,
+        "rawWeightedScore": 26.96,
+        "computedScore": 27.3,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Universitas Brawijaya",
+        "officialRank": 616,
+        "computedRank": 617,
+        "officialScore": 28.0,
+        "rawWeightedScore": 29.25,
+        "computedScore": 29.6,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Universidade de Santiago de Compostela",
+        "officialRank": 629,
+        "computedRank": 630,
+        "officialScore": 27.6,
+        "rawWeightedScore": 28.87,
+        "computedScore": 29.2,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of Tromsø The Arctic University of Norway",
+        "officialRank": 629,
+        "computedRank": 630,
+        "officialScore": 27.6,
+        "rawWeightedScore": 28.87,
+        "computedScore": 29.2,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Azerbaijan State University of Economics (UNEC)",
+        "officialRank": 634,
+        "computedRank": 635,
+        "officialScore": 27.4,
+        "rawWeightedScore": 28.66,
+        "computedScore": 29.0,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Universidad Adolfo Ibáñez",
+        "officialRank": 655,
+        "computedRank": 656,
+        "officialScore": 26.8,
+        "rawWeightedScore": 28.075,
+        "computedScore": 28.4,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Florida International University",
+        "officialRank": 659,
+        "computedRank": 660,
+        "officialScore": 26.7,
+        "rawWeightedScore": 27.96,
+        "computedScore": 28.3,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "Universita' Politecnica delle Marche",
+        "officialRank": 662,
+        "computedRank": 663,
+        "officialScore": 26.6,
+        "rawWeightedScore": 27.895,
+        "computedScore": 28.2,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of Fribourg",
+        "officialRank": 670,
+        "computedRank": 671,
+        "officialScore": 26.3,
+        "rawWeightedScore": 27.58,
+        "computedScore": 27.9,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of New Brunswick",
+        "officialRank": 677,
+        "computedRank": 678,
+        "officialScore": 26.1,
+        "rawWeightedScore": 27.405,
+        "computedScore": 27.7,
+        "scoreDelta": 1.6
+      },
+      {
+        "name": "University of Klagenfurt",
+        "officialRank": 683,
+        "computedRank": 684,
+        "officialScore": 26.0,
+        "rawWeightedScore": 27.28,
+        "computedScore": 27.6,
+        "scoreDelta": 1.6
+      }
+    ],
+    "note": "Differences are expected because the workbook exposes rounded indicator scores; QS likely calculates official overall scores from higher-precision source values and tie rules."
+  }
+}

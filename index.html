@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QS 2027 Re-Ranker</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">QS 2027 World University Rankings</p>
+          <h1>Custom ranking workbench</h1>
+        </div>
+        <div class="topbar-actions">
+          <button id="resetWeights" type="button">Reset QS weights</button>
+          <button id="exportCsv" type="button" class="primary">Export CSV</button>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="control-panel" aria-label="Ranking controls">
+          <section class="panel-section">
+            <div class="section-header">
+              <h2>Weights</h2>
+              <output id="weightTotal">100%</output>
+            </div>
+            <div id="weightControls" class="weight-controls"></div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-header">
+              <h2>Presets</h2>
+            </div>
+            <div class="preset-grid" id="presetGrid"></div>
+          </section>
+
+          <section class="panel-section">
+            <div class="section-header">
+              <h2>Filters</h2>
+            </div>
+            <label class="field">
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="Institution, country, region">
+            </label>
+            <label class="field">
+              <span>Region</span>
+              <select id="regionFilter"></select>
+            </label>
+            <label class="field">
+              <span>Country/Territory</span>
+              <select id="countryFilter"></select>
+            </label>
+            <label class="field">
+              <span>QS rank range</span>
+              <select id="rankFilter">
+                <option value="all">All ranked institutions</option>
+                <option value="100">Top 100</option>
+                <option value="250">Top 250</option>
+                <option value="500">Top 500</option>
+                <option value="700">Top 700 with overall score</option>
+                <option value="banded">Banded ranks only</option>
+              </select>
+            </label>
+          </section>
+        </aside>
+
+        <section class="results-area">
+          <div class="metrics-grid" aria-label="Summary">
+            <div class="metric-block">
+              <span class="metric-label">Universities</span>
+              <strong id="metricCount">0</strong>
+            </div>
+            <div class="metric-block">
+              <span class="metric-label">Weight total</span>
+              <strong id="metricWeight">100%</strong>
+            </div>
+            <div class="metric-block">
+              <span class="metric-label">Largest rise</span>
+              <strong id="metricRise">--</strong>
+            </div>
+            <div class="metric-block">
+              <span class="metric-label">Top custom score</span>
+              <strong id="metricTopScore">--</strong>
+            </div>
+          </div>
+
+          <div class="tool-strip">
+            <div class="view-tabs" role="tablist" aria-label="Results view">
+              <button id="tableViewButton" type="button" class="active">Table</button>
+              <button id="auditViewButton" type="button">Data audit</button>
+            </div>
+            <label class="field compact">
+              <span>Show</span>
+              <select id="limitSelect">
+                <option value="25">25</option>
+                <option value="50" selected>50</option>
+                <option value="100">100</option>
+                <option value="250">250</option>
+                <option value="all">All</option>
+              </select>
+            </label>
+          </div>
+
+          <section id="tableView" class="view-panel">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Custom</th>
+                    <th>QS 2027</th>
+                    <th>Institution</th>
+                    <th>Country/Territory</th>
+                    <th>Region</th>
+                    <th>Custom score</th>
+                    <th>QS score</th>
+                    <th>Delta</th>
+                    <th>Strongest signal</th>
+                  </tr>
+                </thead>
+                <tbody id="resultsBody"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="auditView" class="view-panel hidden">
+            <div class="audit-grid">
+              <div>
+                <h2>Indicator score columns</h2>
+                <div id="indicatorList" class="indicator-list"></div>
+              </div>
+              <div>
+                <h2>QS reproduction</h2>
+                <dl id="reproductionStats" class="stats-list"></dl>
+              </div>
+            </div>
+            <div>
+              <h2>Largest score mismatches</h2>
+              <div class="table-wrap compact-table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Institution</th>
+                      <th>QS rank</th>
+                      <th>Computed rank</th>
+                      <th>QS score</th>
+                      <th>Computed score</th>
+                      <th>Delta</th>
+                    </tr>
+                  </thead>
+                  <tbody id="mismatchBody"></tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
