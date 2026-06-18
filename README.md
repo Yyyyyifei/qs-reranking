@@ -8,7 +8,7 @@ Source data comes from the local workbook:
 
 `2027 QS World University Rankings 1.1 (For qs.com).xlsx`
 
-The workbook is QS World University Rankings 2027 reference data prepared for qs.com. QS ranking names, source indicators, official ranks, and official scores belong to QS Quacquarelli Symonds. This project only reuses the provided workbook locally to explore alternative weighting methods.
+The workbook is QS World University Rankings 2027 reference data prepared for qs.com. Public ranking list: [QS World University Rankings 2027](https://www.topuniversities.com/world-university-rankings). QS ranking names, source indicators, official ranks, and official scores belong to QS Quacquarelli Symonds. This project only reuses the provided workbook locally to explore alternative weighting methods.
 
 ## Disclaimer / 免责提醒
 
