@@ -48,11 +48,3 @@ The custom ranking uses score fields only:
 - `SUS SCORE`: Sustainability, 5%
 
 `Overall SCORE` is preserved for comparison but is not used as an input indicator.
-
-## Run Locally
-
-```bash
-python3 -m http.server 8000
-```
-
-Open `http://localhost:8000/`.
