@@ -25,6 +25,24 @@ This is an unofficial, non-commercial, for-fun ranking explorer.
 - Data source: QS World University Rankings 2027 reference workbook and public ranking list from QS / TopUniversities.
 - Built with OpenAI Codex as a vibe-coding collaborator for data extraction, interface design, and implementation.
 
+## Search Visibility
+
+The local `http://localhost:8000/` version cannot be indexed by Google. To make the site searchable:
+
+Current public URL: [https://yyyyyifei.github.io/qs-reranking/](https://yyyyyifei.github.io/qs-reranking/)
+
+1. Deploy the static files to a public HTTPS URL, such as GitHub Pages, Netlify, Vercel, or another static host.
+2. Generate crawl files with your deployed URL:
+
+```bash
+python3 scripts/generate_sitemap.py https://your-public-site.example
+```
+
+3. Commit and deploy the generated `sitemap.xml` and updated `robots.txt`.
+4. Add the deployed site to [Google Search Console](https://search.google.com/search-console), verify ownership, and submit `https://your-public-site.example/sitemap.xml`.
+
+The page includes search metadata, Open Graph tags, Twitter card metadata, structured data, `robots.txt`, and a sitemap generator.
+
 ## Data Extraction
 
 Run:

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yyyyyifei.github.io/qs-reranking/sitemap.xml
