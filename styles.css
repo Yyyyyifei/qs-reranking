@@ -310,6 +310,18 @@ input[type="search"]::placeholder {
   background: #eef6ff;
 }
 
+.preset-grid button.selected {
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 10px 22px rgba(37, 99, 184, 0.22);
+  color: #fff;
+}
+
+.preset-grid button.selected:hover {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
 .results-area {
   min-width: 0;
   overflow: auto;

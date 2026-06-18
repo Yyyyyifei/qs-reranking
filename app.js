@@ -4,6 +4,7 @@ const state = {
   weights: {},
   ranked: [],
   filtered: [],
+  activePreset: 0,
   view: "table",
 };
 
@@ -98,7 +99,7 @@ function buildControls() {
     .join("");
 
   els.presetGrid.innerHTML = presets
-    .map((preset, index) => `<button type="button" data-preset="${index}">${escapeHtml(preset.name)}</button>`)
+    .map((preset, index) => `<button type="button" data-preset="${index}" aria-pressed="false">${escapeHtml(preset.name)}</button>`)
     .join("");
 }
 
@@ -147,6 +148,20 @@ function setWeights(nextWeights) {
   state.weights = roundWeightsToStep(normalizeWeights({ ...state.weights, ...nextWeights }));
   syncWeightControls();
   update();
+}
+
+function updateActivePreset() {
+  const match = presets.findIndex((preset) => weightsEqual(state.weights, preset.weights));
+  state.activePreset = match;
+  document.querySelectorAll("[data-preset]").forEach((button) => {
+    const active = Number(button.dataset.preset) === match;
+    button.classList.toggle("selected", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function weightsEqual(left, right) {
+  return state.data.indicators.every((indicator) => Number(left[indicator.key] || 0) === Number(right[indicator.key] || 0));
 }
 
 function steppedTarget(current, rawValue) {
@@ -289,6 +304,7 @@ function setView(view) {
 function update() {
   state.ranked = rankUniversities();
   state.filtered = applyFilters(state.ranked);
+  updateActivePreset();
   renderMetrics();
   renderTable();
 }
